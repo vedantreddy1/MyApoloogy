@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#fff4f0" />
+  <meta name="description" content="A little apology, from the heart." />
+  <title>A little note for you ♡</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="glow glow-one" aria-hidden="true"></div>
+  <div class="glow glow-two" aria-hidden="true"></div>
+  <div class="floating-hearts" aria-hidden="true">
+    <span>♡</span><span>✦</span><span>♡</span><span>✧</span><span>♡</span>
+  </div>
+
+  <main class="main">
+    <div class="eyebrow"><span class="eyebrow-dot"></span> a little something from me to you</div>
+    <section class="letter" aria-label="Apology letter">
+      <div class="envelope-wrap" aria-hidden="true">
+        <div class="envelope-back"></div>
+        <div class="mini-letter"><span>for you <span class="mini-heart">♡</span></span></div>
+        <div class="envelope-front"></div>
+        <div class="envelope-seal">♥</div>
+      </div>
+      <h1>Can we have<br /><em>a little moment?</em></h1>
+      <p class="intro">There's something I wanted to say, and I wanted to say it properly.</p>
+      <button class="primary open-btn" id="openApology" type="button">
+        Open my little note <span aria-hidden="true">↗</span>
+      </button>
+      <p class="tiny">made with a lot of thought &amp; a tiny bit of courage</p>
+    </section>
+    <footer>from someone who truly values our friendship <span aria-hidden="true">♡</span></footer>
+  </main>
+
+  <div class="modal-layer" id="modalLayer" role="presentation">
+    <section class="dialog" id="dialog" role="dialog" aria-modal="true" aria-labelledby="dialogTitle" aria-describedby="dialogDescription">
+      <button class="x-btn" id="closeDialog" type="button" aria-label="Close message">×</button>
+      <div class="dialog-icon" aria-hidden="true"><span>♡</span></div>
+      <p class="overline">A note from my heart</p>
+      <h2 id="dialogTitle">I'm <em>sorry.</em></h2>
+      <p class="dialog-description" id="dialogDescription">I know things didn't end well. I could've handled things better, and I'm sorry for my part in it. Our friendship means a lot to me, and I never wanted things to turn out this way.</p>
+      <p class="question">Would you accept my apology?</p>
+      <div class="choice-zone" id="choiceZone">
+        <button id="yesBtn" class="choice-yes" type="button">Yes, I do <span aria-hidden="true">♡</span></button>
+        <button id="noBtn" class="choice-no" type="button">Not yet</button>
+      </div>
+      <button class="space-btn" id="spaceBtn" type="button">I need some space instead</button>
+      <p class="under-note" id="underNote">No pressure, really. Take your time.</p>
+      <p class="privacy-note">If you choose Yes, Not yet, or I need some space, your choice will be sent to me on Telegram. You can close this note without sending anything.</p>
+    </section>
+  </div>
+
+  <div id="resultLayer" class="result-layer" hidden role="presentation">
+    <section class="result-card" role="dialog" aria-modal="true" aria-labelledby="resultTitle">
+      <div id="confetti" class="confetti" aria-hidden="true"></div>
+      <div id="resultIcon" class="result-icon" aria-hidden="true">♡</div>
+      <p class="overline" id="resultEyebrow">a little happier now</p>
+      <h2 id="resultTitle">Thank you <em>so much.</em></h2>
+      <p id="resultMessage">It means a lot that you heard me out. Fifteen years of friendship hold so many memories, and I hope we can make better ones too. No rush, no pressure. I'll listen whenever you're ready. ♡</p>
+      <p id="deliveryStatus" class="delivery-status" role="status" aria-live="polite"></p>
+      <button id="finishBtn" class="primary finish-btn" type="button">Close this little note <span aria-hidden="true">↗</span></button>
+    </section>
+  </div>
+</body>
+</html>
